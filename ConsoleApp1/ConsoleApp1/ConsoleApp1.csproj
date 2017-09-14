@@ -42,8 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CountDisplay.cs" />
+    <Compile Include="Display.cs" />
+    <Compile Include="DisplayImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringDisplayImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
