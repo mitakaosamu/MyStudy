@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class StringDisplayImpl : DisplayImpl
+    public class NormalDisplayImpl : DisplayImpl
     {
         private string _string;
         private int _width;
         
-        public StringDisplayImpl(string s)
+        public NormalDisplayImpl(string s)
         {
             _string = s;
             _width = s.Length;

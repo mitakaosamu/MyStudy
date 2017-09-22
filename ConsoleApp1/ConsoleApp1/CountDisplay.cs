@@ -12,6 +12,10 @@ namespace ConsoleApp1
         {
         }
 
+        /// <summary>
+        /// データを指定回数増幅して出力
+        /// </summary>
+        /// <param name="times"></param>
         public void MultiDisplay(int times)
         {
             Open();
