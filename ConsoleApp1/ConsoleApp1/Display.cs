@@ -18,7 +18,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 出力の前処理
         /// </summary>
-        public void Open()
+        protected void Open()
         {
             _displayImpl.RawOpen();
         }
@@ -26,7 +26,7 @@ namespace ConsoleApp1
         /// <summary>
         /// データの出力
         /// </summary>
-        public void Print()
+        protected void Print()
         {
             _displayImpl.RawPrint();
         }
@@ -34,7 +34,7 @@ namespace ConsoleApp1
         /// <summary>
         /// 出力の後処理
         /// </summary>
-        public void Close()
+        protected void Close()
         {
             _displayImpl.RawClose();
         }

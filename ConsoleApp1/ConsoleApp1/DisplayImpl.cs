@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public abstract class DisplayImpl
+    public interface DisplayImpl
     {
-        public abstract void RawOpen();
+        void RawOpen();
 
-        public abstract void RawPrint();
+        void RawPrint();
 
-        public abstract void RawClose();
+        void RawClose();
     }
 }

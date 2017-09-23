@@ -14,32 +14,32 @@ namespace ConsoleApp1
         public StarDisplayImpl(string s)
         {
             _string = s;
-            _width = s.Length;
+            _width = System.Text.Encoding.GetEncoding("Shift_JIS").GetByteCount(s);
         }
 
-        public override void RawOpen()
+        public void RawOpen()
         {
             PrintLine();
         }
 
-        public override void RawPrint()
+        public void RawPrint()
         {
-            Console.WriteLine("★" + _string + "★");
+            Console.WriteLine("*" + _string + "*");
         }
 
-        public override void RawClose()
+        public void RawClose()
         {
             PrintLine();
         }
 
         private void PrintLine()
         {
-            Console.Write("★");
+            Console.Write("*");
             for( int i = 0; i < _width; i++)
             {
-                Console.Write("★");
+                Console.Write("*");
             }
-            Console.WriteLine("★");
+            Console.WriteLine("*");
         }
     }
 }

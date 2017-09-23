@@ -14,20 +14,20 @@ namespace ConsoleApp1
         public NormalDisplayImpl(string s)
         {
             _string = s;
-            _width = s.Length;
+            _width = System.Text.Encoding.GetEncoding("Shift_JIS").GetByteCount(s);
         }
 
-        public override void RawOpen()
+        public void RawOpen()
         {
             PrintLine();
         }
 
-        public override void RawPrint()
+        public void RawPrint()
         {
             Console.WriteLine("|" + _string + "|");
         }
 
-        public override void RawClose()
+        public void RawClose()
         {
             PrintLine();
         }
