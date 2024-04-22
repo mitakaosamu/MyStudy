@@ -12,6 +12,9 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="BlazorApp1.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+
+    <link href="_content/IgniteUI.Blazor/themes/light/bootstrap.css" rel="stylesheet" />
+    <link href="_content/IgniteUI.Blazor/themes/grid/light/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     @RenderBody()
@@ -27,6 +30,20 @@
         <a class="dismiss">🗙</a>
     </div>
 
+    <script src="_content/IgniteUI.Blazor/app.bundle.js"></script>
     <script src="_framework/blazor.server.js"></script>
+
+    <script>
+        
+        igRegisterScript("WebGridBooleanCellTemplate", (ctx) => {
+            var html = window.igTemplating.html;
+            if (ctx.cell.value) {
+                return html`<img src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/active.png" title="Continued" alt="Continued" />`
+            } else {
+                return html`<img src="https://www.infragistics.com/angular-demos-lob/assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />`;
+            }
+        }, false);
+
+    </script>
 </body>
 </html>
